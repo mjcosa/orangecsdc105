@@ -15,15 +15,15 @@ export const createPost = async (req, res) => {
             userPicturePath: user.picturePath,
             picturePath,
             likes: {},
-            comments: []
-        })
+            comments: [],
+        });
         await newPost.save();
 
         const post = await Post.find();
         res.status(201).json(post);
 
     } catch (error) {
-        res.status(409).json({message: error.message});
+        res.status(409).json({ message: error.message });
     }
 }
 
