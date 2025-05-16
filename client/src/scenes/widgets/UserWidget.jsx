@@ -19,7 +19,7 @@ const UserWidget = ({ userId, picturePath }) => {
     const navigate = useNavigate();
     const token = useSelector((state) => state.token);
     const dark = palette.neutral.dark;
-    const medium = palette.neutral.medium;
+    const medium = palette.neutral.text;
     const main = palette.neutral.main;
 
 
@@ -91,7 +91,7 @@ const UserWidget = ({ userId, picturePath }) => {
                     <Typography color={medium}>{location}</Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem">
-                    <LocationOnOutlined fontSize="large" sx={{ color: main }} />
+                    <WorkOutlineOutlined fontSize="large" sx={{ color: main }} />
                     <Typography color={medium}>{occupation}</Typography>
                 </Box>
              </Box>

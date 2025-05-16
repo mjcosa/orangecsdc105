@@ -12,7 +12,7 @@ const LoginPage = () => {
             fontSize="32px" 
             color='primary' 
         >
-            Sociopedia
+            Orange
         </Typography>
         </Box>
         <Box 
@@ -23,7 +23,7 @@ const LoginPage = () => {
             backgroundColor={theme.palette.background.alt}
         >
             <Typography fontWeight="500" variant='h5' sx={{ mb: "1.5rem"}}>
-                Welcome to Sociopedia, the social media for sociopaths!
+                Welcome to Orange, the social media for orange people
             </Typography>
             <Form />
         </Box>

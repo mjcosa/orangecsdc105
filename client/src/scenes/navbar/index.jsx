@@ -54,10 +54,10 @@ const Navbar = () => {
                 "&:hover": {
                     color: primaryLight,
                     cursor: "pointer",
-                },
+                },  
             }}
             >
-                Sociopedia
+                Orange
             </Typography>
             {isNonMobileScreens && (
                 <FlexBetween backgroundColor={neutralLight} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
@@ -65,7 +65,7 @@ const Navbar = () => {
                     <IconButton>
                         <Search />
                     </IconButton>
-                </FlexBetween>
+                </FlexBetween>  
             )}
         </FlexBetween>
         {/* Desktop  Nav */}
