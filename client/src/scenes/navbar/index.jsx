@@ -60,7 +60,7 @@ const Navbar = () => {
                 Orange
             </Typography>
             {isNonMobileScreens && (
-                <FlexBetween backgroundColor={neutralLight} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
+                <FlexBetween backgroundColor={background} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
                     <InputBase placeholder='Search...' />
                     <IconButton>
                         <Search />
@@ -85,7 +85,7 @@ const Navbar = () => {
                     <Select
                         value={fullName}
                         sx={{
-                            backgroundColor: neutralLight,
+                            backgroundColor: background,
                             width: "150px",
                             borderRadius: "0.25rem",
                             p: "0.25rem 1rem",

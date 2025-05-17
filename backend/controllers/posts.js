@@ -38,6 +38,7 @@ export const getFeedPosts = async (req, res) => {
     }
 }
 
+//Gets the posts of every user in the social media
 export const getUserPosts = async (req, res) => {
     try {
         const { userId } = req.params;
@@ -49,7 +50,7 @@ export const getUserPosts = async (req, res) => {
     }
 }
 
-//Update
+//Updates the like count in a post
 export const likePost = async (req, res) => {
     try {
         const { id } = req.params;

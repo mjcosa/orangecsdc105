@@ -1,7 +1,7 @@
 import User from "../models/user.js";
 
 //Read
-
+// Get user info from the database
 export const getUser = async (req, res) => {
     try {
         const { id } = req.params;
@@ -13,6 +13,7 @@ export const getUser = async (req, res) => {
     }
 }
 
+// Get all user friends
 export const getUserFriends = async (req, res) => {
     try {
         const { id } = req.params;
@@ -31,7 +32,7 @@ export const getUserFriends = async (req, res) => {
     }
 }
 
-// Update
+// Update user friend list
 export const addRemoveFriend = async (req, res) => {
     try {
         const { id, friendId } = req.params;
@@ -62,5 +63,40 @@ export const addRemoveFriend = async (req, res) => {
         res.status(200).json(formattedFriends);
     } catch (error) {
         res.status(404).json({message: error.message});
+    }
+}
+
+// Update USER PROFILE
+export const editUser = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const {
+            firstName,
+            lastName,
+            bio,
+            location,
+            occupation,
+        } = req.body;
+
+        const picture = req.file?.filename;
+
+        const updatedUser = await User.findByIdAndUpdate(
+            id,
+            {
+                firstName,
+                lastName,
+                bio,
+                location,
+                occupation,
+                picturePath: picture,
+            },
+            { new: true }
+        );
+
+        res.status(200).json(updatedUser);
+
+    } catch (err) {
+        res.status(500).json({ error: err.message});
     }
 }

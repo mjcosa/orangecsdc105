@@ -16,14 +16,14 @@ const LoginPage = () => {
         </Typography>
         </Box>
         <Box 
-            width={isNonMobileScreens ? "50%" : "93%"}
+            width={isNonMobileScreens ? "35%" : "93%"}
             p="2rem"
-            m="2rem auto"
+            m="4rem auto"
             borderRadius="1.5rem"
             backgroundColor={theme.palette.background.alt}
         >
             <Typography fontWeight="500" variant='h5' sx={{ mb: "1.5rem"}}>
-                Welcome to Orange, the social media for orange people
+                Welcome to Orange, the social media for orange-minded people
             </Typography>
             <Form />
         </Box>
