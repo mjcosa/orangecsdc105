@@ -38,7 +38,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
         );
         const data = await response.json();
         dispatch(setFriends({ friends: data }));
-
+        // Functionality to add or Delete Friends through
+        // api calls to the backend, and to the database
     };
 
     return (

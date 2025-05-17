@@ -1,7 +1,7 @@
 import User from "../models/user.js";
 
 //Read
-// Get user info from the database
+// Basic Mongoose API call to fetch user information
 export const getUser = async (req, res) => {
     try {
         const { id } = req.params;

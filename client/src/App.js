@@ -11,9 +11,9 @@ import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
 
 function App() {
-  const mode = useSelector((state) => state.mode); 
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
-  const isAuth = Boolean(useSelector((state) => state.token));
+  const mode = useSelector((state) => state.mode); // Keeps tracks of the state or authentication of the user
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]); // Functionality for light mode and dark mode
+  const isAuth = Boolean(useSelector((state) => state.token)); // Keeps tracks of the state or authentication of the user
 
   // Routes for the frontend
   return (

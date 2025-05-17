@@ -18,6 +18,7 @@ export const createPost = async (req, res) => {
             comments: [],
         });
         await newPost.save();
+        // Basic mongoose API call to save the data fetch from the users to the database
 
         const post = await Post.find();
         res.status(201).json(post);
@@ -27,7 +28,7 @@ export const createPost = async (req, res) => {
     }
 }
 
-// Read
+// Basic Mongoose API call to fetch data from the database
 export const getFeedPosts = async (req, res) => {
     try {
         const post = await Post.find();
