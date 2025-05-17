@@ -69,8 +69,8 @@ JWT (JSON Web Tokens): Authentication
 
 Setup Instructions
 Clone the repository:
-git clone https://github.com/mjcosa/csdc105Socmed.git
-cd csdc105Socmed
+git clone https://github.com/mjcosa/orangecsdc105.git
+cd orangecsdc105
 
 Install Dependencies:
 cd backend
